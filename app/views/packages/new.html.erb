@@ -1,0 +1,95 @@
+<h1>New Package</h1>
+
+<%= form_with model: @package do |form| %>
+  <div>
+    <%= form.label :name %><br>
+    <%= form.text_field :name %>
+    <% @package.errors.full_messages_for(:name).each do |message|%>
+      <div> <%= message %> </div>
+    <% end %>
+  </div>
+
+  <div>
+    <%= form.label :surname %><br>
+    <%= form.text_field :surname %>
+    <% @package.errors.full_messages_for(:surname).each do |message|%>
+      <div> <%= message %> </div>
+    <% end %>
+  </div>
+
+  <div>
+    <%= form.label :patronymic %><br>
+    <%= form.text_field :patronymic %>
+    <% @package.errors.full_messages_for(:patronymic).each do |message|%>
+      <div> <%= message %> </div>
+    <% end %>
+  </div>
+
+  <div>
+    <%= form.label :phonenumber %><br>
+    <%= form.telephone_field :phonenumber %>
+    <% @package.errors.full_messages_for(:phonenumber).each do |message|%>
+      <div> <%= message %> </div>
+    <% end %>
+  </div>
+
+  <div>
+    <%= form.label :email %><br>
+    <%= form.email_field :email %>
+    <% @package.errors.full_messages_for(:email).each do |message|%>
+      <div> <%= message %> </div>
+    <% end %>
+  </div>
+
+  <div>
+    <%= form.label :length %><br>
+    <%= form.number_field :length %>
+    <%= @package.errors.full_messages_for(:length).each do |message|%>
+      <div> <%= message %> </div>
+    <% end %>
+  </div>
+
+  <div>
+    <%= form.label :width %><br>
+    <%= form.number_field :width %>
+    <% @package.errors.full_messages_for(:width).each do |message|%>
+      <div> <%= message %> </div>
+    <% end %>
+  </div>
+
+  <div>
+    <%= form.label :height %><br>
+    <%= form.number_field :height %>
+    <% @package.errors.full_messages_for(:height).each do |message|%>
+      <div> <%= message %> </div>
+    <% end %>
+  </div>
+
+  <div>
+    <%= form.label :weight %><br>
+    <%= form.number_field :weight %>
+    <% @package.errors.full_messages_for(:weight).each do |message|%>
+      <div> <%= message %> </div>
+    <% end %>
+  </div>
+
+  <div>
+    <%= form.label :POfD %><br>
+    <%= form.text_field :POfD %>
+    <% @package.errors.full_messages_for(:pointofdeparture).each do |message|%>
+      <div> <%= message %> </div>
+    <% end %>
+  </div>
+
+  <div>
+    <%= form.label :destination %><br>
+    <%= form.text_field :destination %>
+    <% @package.errors.full_messages_for(:destination).each do |message|%>
+      <div> <%= message %> </div>
+    <% end %>
+  </div>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>
